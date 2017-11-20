@@ -5,11 +5,11 @@
 
 # Site
 title: Jeremy's Blog
-subtitle: Artificial Intelligence, Deep Learning and Reinforcement Learning
+subtitle: 目标：风靡万千少女的人工智能研究员
 description: Deep Learning & Reinforcement Learning
 author: Jeremy Qiu
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
-language: en
+language: zh-Hans
 date_format: '%Y-%m-%d'
 
 # URL
