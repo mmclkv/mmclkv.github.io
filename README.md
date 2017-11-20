@@ -1,76 +1,35 @@
-#[9leg.com](http://9leg.com/)
+# NexT
+
+> 精于心，简于形
+
+NexT 是由 [Hexo NexT](https://github.com/iissnan/hexo-theme-next) 移植而来的 Jekyll 主题。<!--commit: f951075d9b739d26b42472431995fa68d08796aa-->
+
+<a href="http://simpleyyt.github.io/jekyll-theme-next/" target="_blank">在线预览 Preview</a> | <a href="http://simpleyyt.com" target="_blank">Yitao's Blog</a> | <a href="http://theme-next.simpleyyt.com" target="_blank">NexT 使用文档</a> |  [English Documentation](README.en.md)
+
+[![Join the chat at https://gitter.im/simpleyyt/jekyll-theme-next](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jekyll-theme-next/lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+![NexT Schemes](http://iissnan.com/nexus/next/next-schemes.jpg)
 
 
-###请使用自己申请的网站统计Id，评论Id等
+## 浏览器支持 Browser support
 
-如今网络是开源的年代，茫茫多的框架。
-
-既然我的博客放在gitHub上，也表示了开源，希望有更多的人来使用Jekyll模版。
-
-但发现很多人Fork我的项目后，并不根据自己情况修改任何配置，而是直接写post了。
-
-这导致我的网站统计和评论带来了不必要的麻烦，简单的说就是，你网站中的评论被我管理，这不是你想要看到的吧。
-
-访问你网站的流量PV和UV等，算在我的统计范围内，这也不是你想要看到的吧(其实我很乐意的...)。
-
-那么就简单的说下，如何个性化自定义配置网站。
-
-**_config.yml**,网站的许多配置都在这个文件中，导航栏信息配置，网站作者信息配置，友链配置，评论和网站统计等。
-
-下面是我的配置：
-
-```
-googleAnaly:
-
-  config: false
-
-  id: Your-id-is-here
-```
-
-```
-baiduTongji:
-	
-  	config: true
-  	
-  	id: Your-id-is-here
-```
-
-```
-disqus:
-
-  config: false
-  
-  id: Your-id-is-here
-```
-
-```
-duoshuo:
-
-  config: true
-  
-  id: Your-id-is-here
-```
-
-```
-baiduShare:
-
-  config: true
-```
-可以使用google分析和baidu统计对网站进行流量多方面的信息跟踪查看，在这里使用了baidu统计，**注意：请设置你申请的统计Id**。
-
-在这里不使用google分析的原因是加载ga.js时间过长或者根本无法请求，原因你懂的。
-
-disqus和duoshuo都是网站评论设置，使用了多说，国内还是比较好的，**注意：请设置你申请的多说Id**。
-
-baiduShare是baidu分享插件，比较实用。
-
-最后根据自己的实际情况，修改_layouts下的两个模版html文件，稍微有点html知识都可以看懂并修改。
+![Browser support](http://iissnan.com/nexus/next/browser-support.png)
 
 
-##重复,请使用自己申请的网站统计Id，评论Id等。
+## 贡献 Contributing
 
-什么？怎么申请？google去...
-
-
+欢迎提交问题与需求，修复代码。
 
 
+## 开发 Development
+
+NexT 主旨在于简洁优雅且易于使用，所以首先要尽量确保 NexT 的简洁易用性。
+
+NexT is built for easily use with elegant appearance. First things first, always keep things simple.
+
+
+## 捐赠
+
+支付宝捐赠链接还是要有的，万一真的有人捐呢。
+
+![支付宝扫码捐赠](http://p1.bpimg.com/567571/9a4a158daee8aa69.png)
