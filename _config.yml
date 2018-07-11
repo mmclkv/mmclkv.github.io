@@ -68,7 +68,7 @@ kramdown:
 
 pages_list:
   About: '/about/'
-  Hobby projects: '/hobbies/'
+  Publications: '/publications/'
   Projects: '/projects/'
   Blog: '/atom.xml'
 
