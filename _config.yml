@@ -73,10 +73,10 @@ kramdown:
   auto_ids: true
 
 pages_list:
-  About: '/vr/about/'
-  Hobby projects: '/vr/hobbies/'
-  Tags: '/vr/tags/'
-  Feed: '/vr/atom.xml'
+  About: '/about/'
+  Hobby projects: '/hobbies/'
+  Tags: '/tags/'
+  Feed: '/atom.xml'
 
 picture:
   source: "_assets/imgs/_fullsize"
