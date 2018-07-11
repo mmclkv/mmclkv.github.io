@@ -70,7 +70,7 @@ pages_list:
   About: '/about/'
   Publications: '/publications/'
   Projects: '/projects/'
-  Blog: '/atom.xml'
+  Blog: '/blogs/'
 
 picture:
   source: "_assets/imgs/_fullsize"
