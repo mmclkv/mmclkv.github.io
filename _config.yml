@@ -74,8 +74,8 @@ kramdown:
 
 pages_list:
   About: '/about/'
-  Publications: '/hobbies/'
-  Projects: '/tags/'
+  Publications: '/publications/'
+  Projects: '/projects/'
   Blog: '/atom.xml'
 
 picture:
