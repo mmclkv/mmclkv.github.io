@@ -37,6 +37,8 @@ url:                 "http://mmclkv.github.io"
 paginate_l:          4
 baseurl:             ""
 
+paginate_langs:      ["en"]
+
 # Assets
 #
 # We specify the directory for Jekyll so we can use @imports.
