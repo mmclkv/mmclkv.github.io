@@ -30,7 +30,7 @@ exclude: ["transfer.sh", README.md]
 title:               Jiaming Qiu
 url:                 "http://mmclkv.github.io"
 paginate_l:          4
-baseurl:             ""
+baseurl:             "/"
 
 paginate_langs:      ["en"]
 
