@@ -20,11 +20,6 @@ defaults:
 tag_title_prefix:   "Posts tagged #"
 tag_title_suffix:   ""
 
-# Facebook settings
-fb_admins:          606660677
-avatar:             "/public/images/me_hires.png"
-locale:             en_US
-
 # Image settings
 image_base:          /public/images/
 
