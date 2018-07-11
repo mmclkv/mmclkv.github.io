@@ -36,7 +36,6 @@ title:               Jiaming Qiu
 url:                 "http://mmclkv.github.io"
 paginate_l:          4
 baseurl:             ""
-paginate_langs:      ["en", "sv", "ru"]
 
 # Assets
 #
