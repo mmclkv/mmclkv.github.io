@@ -58,7 +58,6 @@ gems:
   - jekyll-paginate
 
 # Conversion
-markdown:    redcarpet
 excerpt_separator: "<!--break-->"
 
 redcarpet:
