@@ -47,14 +47,14 @@ sass:
 
 # About/contact
 author:
-  name:              Vitaly Repin
+  name:              Jiaming Qiu
   url:               https://twitter.com/vitalyrepin
-  email:             vitaly_repin@fsfe.org
+  email:             jeremyqiuuu@gmail.com
 
 # Custom vars
 version:             1.0.0
 github:
-  repo:              https://github.com/vitalyrepin/vrepinblog
+  repo:              https://github.com/mmclkv/mmclkv.github.io
 
 # Google sitemap generation
 gems:
