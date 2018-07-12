@@ -54,7 +54,7 @@ html {
 @media (min-width: 38em) {
   html {
     font-family: 'Monda', Sans-Serif;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 400;
   }
 }
