@@ -9,8 +9,7 @@ timezone: Asia/Shanghai
 
 # Default YAML frontmatter settings
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:

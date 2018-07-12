@@ -45,6 +45,35 @@ a.anchor{display: block; position: relative; top: -99px; visibility: hidden;}
  * Update the foundational and global aspects of the page.
  */
 
+ /* Web Fonts */
+ /* monda-regular - latin */
+ @font-face {
+   font-family: 'Monda';
+   font-style: normal;
+   font-weight: 400;
+   src: local('Monda Regular'), local('Monda-Regular'),
+        url('/public/fonts/monda-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('/public/fonts/monda-v7-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+ }
+ /* monda-700 - latin */
+ @font-face {
+   font-family: 'Monda';
+   font-style: normal;
+   font-weight: 700;
+   src: local('Monda Bold'), local('Monda-Bold'),
+        url('/public/fonts/monda-v7-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('/public/fonts/monda-v7-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+ }
+ /* julius-sans-one-regular - latin */
+ @font-face {
+   font-family: 'Julius Sans One';
+   font-style: normal;
+   font-weight: 400;
+   src: local('Julius Sans One'), local('JuliusSansOne-Regular'),
+        url('/public/fonts/julius-sans-one-v6-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('/public/fonts/julius-sans-one-v6-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+ }
+
 /* Prevent scroll on narrow devices */
 html,
 body {
