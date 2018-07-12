@@ -29,9 +29,11 @@ exclude: ["transfer.sh", README.md]
 # Setup
 title:               Jiaming Qiu
 url:                 "http://mmclkv.github.io"
-paginate_l:          4
 baseurl:             "/"
 
+# Pagination Setting
+paginate_l:          4
+paginate_path:       "/blog/page:num/"
 paginate_langs:      ["en"]
 
 # Assets
