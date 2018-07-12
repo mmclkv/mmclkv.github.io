@@ -32,9 +32,8 @@ url:                 "http://mmclkv.github.io"
 baseurl:             "/"
 
 # Pagination Setting
-paginate_l:          4
+paginate:            5
 paginate_path:       "/blogs/page:num/"
-paginate_langs:      ["en"]
 
 # Assets
 #
