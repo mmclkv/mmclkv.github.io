@@ -108,28 +108,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /*
- * Container
- *
- * Center the page content.
- */
-
-.container {
-  max-width: 28rem;
-}
-@media (min-width: 38em) {
-  .container {
-    max-width: 32rem;
-  }
-}
-@media (min-width: 56em) {
-  .container {
-    min-height: 100%;
-    max-width: 38rem;
-  }
-}
-
-
-/*
  * Masthead
  *
  * Super small header above the content for site name and short description.
@@ -138,8 +116,8 @@ h1, h2, h3, h4, h5, h6 {
 .masthead {
   padding-top:    1rem;
   padding-bottom: 1rem;
-  margin-bottom: 3rem;
-  border-bottom: 1px solid #eee;
+  margin-bottom:  3rem;
+  border-bottom:  1px solid #eee;
 }
 .masthead-title {
   margin-top: 0;
@@ -155,6 +133,39 @@ h1, h2, h3, h4, h5, h6 {
   color: #c0c0c0;
   letter-spacing: 0;
 }
+
+
+/*
+ * Container
+ *
+ * Center the page content.
+ */
+
+.container {
+  max-width: 28rem;
+}
+@media (min-width: 38em) {
+  .container {
+    max-width: 32rem;
+  }
+}
+@media (min-width: 56em) {
+  .container {
+    max-width: 38rem;
+  }
+}
+
+
+/*
+ * Foot
+ *
+ * Footer
+ */
+
+.foot {
+
+}
+
 
 @media (max-width: 48em) {
   .masthead-title {
