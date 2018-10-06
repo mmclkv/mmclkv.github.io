@@ -121,7 +121,7 @@ TH_TENSOR_APPLY2(scalar_t, in, scalar_t, gradOut,
   dotp += (*in_data - mean) * (*gradOut_data););
 ```
 
-在计算梯度的时候直接使用sum和dotp，减少了一次重复计算：
+在计算梯度的时候直接使用sum和dotp，避免了重复的计算：
 
 ``` javascript
 // 计算x_i的梯度，使用了dotp和sum
