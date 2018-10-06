@@ -112,7 +112,7 @@ void THNN_(BatchNormalization_backward)(
 
 $\frac{\partial L}{\partial w}=\sum_{j=1}^{n}\frac{\partial L}{\partial y_j}\cdot \hat{x}_j=\frac{1}{\sigma}\sum_{j=1}^{n}\frac{\partial L}{\partial y_j}\cdot(x_j - \mu)$
 
-此时可以看到在\\(\frac{\partial L}{\partial x_i\\)和\\(\frac{\partial L}{\partial b_f}\\)中均出现了\\(\sum_{j=1}^{n}\frac{\partial L}{\partial y_j}\\)这个量，在\\(\frac{\partial L}{\partial x_i\\)和\\(\frac{\partial L}{\partial b_f}\\)中均出现了\\(\sum_{j=1}^{n}\frac{\partial L}{\partial y_j}\cdot(x_j - \mu)\\)这个量，因此先提前计算好这两个量，分别存放在sum变量和dotp变量中：
+此时可以看到在\\(\frac{\partial L}{\partial x_i}\\)和\\(\frac{\partial L}{\partial b_f}\\)中均出现了\\(\sum_{j=1}^{n}\frac{\partial L}{\partial y_j}\\)这个量，在\\(\frac{\partial L}{\partial x_i}\\)和\\(\frac{\partial L}{\partial b_f}\\)中均出现了\\(\sum_{j=1}^{n}\frac{\partial L}{\partial y_j}\cdot(x_j - \mu)\\)这个量，因此先提前计算好这两个量，分别存放在sum变量和dotp变量中：
 
 ``` javascript
 // sum over all gradOutput in feature plane
