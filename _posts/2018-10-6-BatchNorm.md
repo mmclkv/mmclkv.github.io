@@ -137,11 +137,11 @@ TH_TENSOR_APPLY2(scalar_t, gradIn, scalar_t, gradOut,
 ``` javascript
 // 计算w的梯度，使用了dotp
 scalar_t val = THTensor_(get1d)(gradWeight, f);
-  THTensor_(set1d)(gradWeight, f, val + scale * dotp * invstd);
+THTensor_(set1d)(gradWeight, f, val + scale * dotp * invstd);
 ```
 
 ``` javascript
-// 计算w的梯度，使用了sum
-scalar_t val = THTensor_(get1d)(gradWeight, f);
-  THTensor_(set1d)(gradWeight, f, val + scale * dotp * invstd);
+// 计算b的梯度，使用了sum
+scalar_t val = THTensor_(get1d)(gradBias, f);
+THTensor_(set1d)(gradBias, f, val + scale * sum);
 ```
