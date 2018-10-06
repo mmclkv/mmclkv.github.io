@@ -19,5 +19,5 @@ Batch Normalization的梯度推导相对有点复杂，原论文写得比较简�
 ![bn7](/public/images/bn7.jpg)
 ![bn8](/public/images/bn8.jpg)
   
-  
+其中\\(\frac{\partial L}{\partial x_i}\\)，\\(\frac{\partial L}{\partial w}\\)，\\(\frac{\partial L}{\partial b}\\)三个项的梯度会实际被用到。
   
