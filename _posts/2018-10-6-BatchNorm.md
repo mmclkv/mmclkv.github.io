@@ -108,4 +108,44 @@ void THNN_(BatchNormalization_backward)(
 }
 
 ```
-  
+首先，对于图像分类等任务，每一个Batch的输入是一个四维的Tensor，其shape为(N, C, H, W)。BN是在C这个维度上做的，在代码中用变量nInput表示。因此，整个函数的主要计算逻辑都包在一个循环之中，循环变量f从0遍历到nInput - 1，每次取出Input[:, f, :, :]和gradOutput[:, f, :, :]，计算\\(\frac{\partial L}{\partial x_i\\)（这里的x就是Input[:, f, :, :]，i的取值范围为从0到NHW-1），\\(\frac{\partial L}{\partial w_f}\\)，\\(\frac{\partial L}{\partial b_f}\\)。在计算这三个变量的梯度的时候有一个小优化：注意到
+
+$\frac{\partial L}{\partial w}=\sum_{j=1}^{n}\frac{\partial L}{\partial y_j}\cdot \hat{x}_j=\frac{1}{\sigma}\sum_{j=1}^{n}\frac{\partial L}{\partial y_j}\cdot(x_j - \mu)$
+
+此时可以看到在\\(\frac{\partial L}{\partial x_i\\)和\\(\frac{\partial L}{\partial b_f}\\中均出现了\\(\sum_{j=1}^{n}\frac{\partial L}{\partial y_j}\\)这个量，在\\(\frac{\partial L}{\partial x_i\\)和\\(\frac{\partial L}{\partial b_f}\\中均出现了\\(\sum_{j=1}^{n}\frac{\partial L}{\partial y_j}\cdot(x_j - \mu)\\)这个量，因此先提前计算好这两个量，分别存放在sum变量和dotp变量中：
+
+``` javascript
+// sum over all gradOutput in feature plane
+accreal sum = 0;
+TH_TENSOR_APPLY(scalar_t, gradOut, sum += *gradOut_data;);
+
+// dot product of the Q(X) and gradOuput
+accreal dotp = 0;
+TH_TENSOR_APPLY2(scalar_t, in, scalar_t, gradOut,
+  dotp += (*in_data - mean) * (*gradOut_data););
+```
+
+在计算梯度的时候直接使用sum和dotp，减少了一次重复计算：
+
+``` javascript
+// 计算x_i的梯度，使用了dotp和sum
+scalar_t k = (scalar_t) dotp * invstd * invstd / n;
+TH_TENSOR_APPLY2(scalar_t, gradIn, scalar_t, in,
+  *gradIn_data = (*in_data - mean) * k;);
+
+accreal gradMean = sum / n;
+TH_TENSOR_APPLY2(scalar_t, gradIn, scalar_t, gradOut,
+  *gradIn_data = (*gradOut_data - gradMean - *gradIn_data) * invstd * w;);
+```
+
+``` javascript
+// 计算w的梯度，使用了dotp
+scalar_t val = THTensor_(get1d)(gradWeight, f);
+  THTensor_(set1d)(gradWeight, f, val + scale * dotp * invstd);
+```
+
+``` javascript
+// 计算w的梯度，使用了sum
+scalar_t val = THTensor_(get1d)(gradWeight, f);
+  THTensor_(set1d)(gradWeight, f, val + scale * dotp * invstd);
+```
